@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="menu-superior">
+            <ul>
+                <li><a href="../index.html">Conócenos</a></li>
+                <li><a href="../Edu/index.html">Educación</a></li>
+                <li><a href="../Adm/index.html">Admisión</a></li>
+                <li><a href="../FG/index.html">Fotogalería</a></li>
+                <li><a href="../Bec/index.html">Becas</a></li>
+                <li class="desplegable">
+                    <a href="#">Más</a>
+                    <div class="contenido-desplegable">
+                        <a href="../For/index.html">Blog</a>
+                        <a href="../pr/index.html">Profesores</a>
+                        <a href="../cal/index.html">Calendario cívico</a>
+                        <a href="../ven/index.html">Ven y descúbrenos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="mision-vision">
+                <div class="mision">
+                    <h2>Misión</h2>
+                    <img src="img/1.jpg" alt="Misión">
+                    <p>Nuestra misión es desarrollar en los alumnos las capacidades, habilidades, actitudes y valores para su formación integral: competencias fundamentales para su incorporación a la sociedad y para todo el aprendizaje a lo largo de la vida. Todo por lograr los propósitos educativos.</p>
+                </div>
+                <div class="vision">
+                    <h2>Visión</h2>
+                    <img src="img/2.jpg" alt="Visión">
+                    <p>Ser una institución educativa básica donde se imparta una educación laica, inclusiva y sobre todo de calidad, que cumpla y sirva de base para el interés de los alumnos, logrando una formación integral como seres humanos para un desarrollo pleno y armónico; siendo críticos, analíticos y reflexivos, con valores sólidos que les sirvan para enfrentar.</p>
+                </div>
+            </div>
+            
+            <div class="informacion-contacto">
+                <h2>Información de contacto</h2>
+                <p>Escuela primaria GREGORIO TORRES QUINTERO<br>
+                Calle Licenciado Díaz Ordaz No. 340,<br>
+                Colonia Miramontes Teocaltiche, Teocaltiche,<br>
+                Teocaltiche, Jalisco,<br>
+                C.P. 47200</p>
+                <h3>Contactanos</h3>
+                <form id="contacto-form" action="#" method="POST">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="campo">
+                        <label for="interes">En qué estoy interesado:</label>
+                        <select id="interes" name="interes" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Información General">Información General</option>
+                            <option value="Inscripciones">Inscripciones</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <footer>
+        <div class="acerca-de">
+            <h4>Acerca de nosotros</h4>
+            <p>GREGORIO TORRES QUINTERO <br>
+            Calle Licenciado Díaz Ordaz No. 340, <br>
+            Colonia Miramontes Teocaltiche, Teocaltiche, <br>
+            Teocaltiche, Jalisco, <br>
+            C.P. 47200</p>
+        </div>
+        <div class="turnos">
+            <h4>Turno</h4>
+            <p>Matutinos</p>
+            <p>Teléfono: 3461022688</p>
+            <p>Correo: quintero@jalisco.edu.mx</p>
+        </div>
+        <div class="imagen-derecha">
+            <img src="../Imgin/SEP.jpg" alt="Imagen del logotipo">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

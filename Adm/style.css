@@ -1,0 +1,186 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    color: black;
+}
+
+.menu-superior {
+    padding: 80px 30px 40px;
+    background-image: url('../Imgin/banner.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    padding-top: 130px;
+}
+
+.menu-superior ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-superior ul li {
+    margin-right: 20px;
+}
+
+.menu-superior ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-superior ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-bottom: 20px;
+}
+
+.menu-superior ul li a:hover {
+    color: #ffd700;
+}
+
+.desplegable {
+    position: relative;
+}
+
+.contenido-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -150px;
+    width: 200px;
+    z-index: 1;
+    background-color: gray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.desplegable:hover .contenido-desplegable {
+    display: block;
+}
+
+.contenido-desplegable a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.contenido-desplegable a:hover {
+    color: #ffd700;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, p {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cita-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cita {
+    font-style: italic;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Para permitir que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-between;
+}
+
+.acerca-de, .turnos, .imagen-derecha {
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.turnos {
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.imagen-derecha img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 1024px) {
+    .menu-superior {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-superior {
+        padding-top: 80px;
+    }
+    
+    .menu-superior ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-superior ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .contenido-desplegable {
+        left: 0;
+    }
+
+    .cita {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-superior {
+        padding-top: 60px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .cita {
+        width: 100%;
+    }
+
+    .acerca-de, .turnos, .imagen-derecha {
+        width: 100%;
+    }
+
+    .turnos {
+        text-align: center;
+    }
+}

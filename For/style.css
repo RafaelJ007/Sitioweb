@@ -1,0 +1,159 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: #fff;
+}
+
+.menu-superior {
+    padding: 80px 30px 40px;
+    background-image: url('../Imgin/banner.png'); 
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding-top: 130px; /* Ajusta el espacio superior según sea necesario */
+}
+
+.menu-superior ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-superior ul li {
+    margin-right: 20px;
+}
+
+.menu-superior ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-superior ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.menu-superior ul li a:hover {
+    color: #ffd700;
+}
+
+.desplegable {
+    position: sticky;
+}
+
+.contenido-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -150px; /* Ajusta la posición horizontal del menú desplegable */
+    width: 200px;
+    z-index: 1;
+    background-color: gray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.desplegable:hover .contenido-desplegable {
+    display: block;
+}
+
+.contenido-desplegable a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.contenido-desplegable a:hover {
+    color: #ffd700;
+}
+
+.container {
+    max-width: 1000px; /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 0.5s ease; /* Transición suave para el desplazamiento */
+}
+
+.imagen img {
+    width: 100%;
+    height: auto; /* Para asegurar que la imagen no se distorsione */
+}
+
+footer {
+    background-color: #f2f2f2; /* Color de fondo del pie de página */
+    padding: 20px; /* Espaciado interno del pie de página */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    flex-wrap: wrap; /* Permite que los elementos del footer se envuelvan en pantallas pequeñas */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+}
+
+.acerca-de, .turnos, .imagen-derecha {
+    width: 30%; /* Ancho aproximado de cada sección en pantallas grandes */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+    margin-bottom: 20px; /* Añade margen inferior a las secciones */
+}
+
+.turnos {
+    border: 2px solid blue; /* Borde azul */
+    padding: 10px; /* Espaciado interno */
+}
+
+.imagen-derecha img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .menu-superior {
+        padding-top: 100px; /* Ajustar el padding superior del menú en pantallas pequeñas */
+    }
+
+    .container {
+        padding: 10px; /* Reducir el padding del contenedor en pantallas pequeñas */
+    }
+
+    .carrusel {
+        overflow: scroll; /* Permitir el desplazamiento horizontal en pantallas pequeñas */
+    }
+
+    .imagen {
+        width: 80%; /* Ancho del carrusel en pantallas pequeñas */
+    }
+
+    .acerca-de, .turnos, .imagen-derecha {
+        width: 100%; /* Ancho completo para las secciones del pie de página en pantallas pequeñas */
+    }
+}
+

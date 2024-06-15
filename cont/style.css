@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: #fff;
+}
+
+.menu-superior {
+    padding: 80px 30px 40px;
+    background-image: url('../Imgin/banner.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+}
+
+.menu-superior ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-superior ul li {
+    margin-right: 20px;
+}
+
+.menu-superior ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-superior ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-bottom: 20px;
+}
+
+.menu-superior ul li a:hover {
+    color: #ffd700;
+}
+
+.desplegable {
+    position: sticky;
+}
+
+.contenido-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -150px;
+    width: 200px;
+    z-index: 1;
+    background-color: gray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.desplegable:hover .contenido-desplegable {
+    display: block;
+}
+
+.contenido-desplegable a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.contenido-desplegable a:hover {
+    color: #ffd700;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Estilos para la sección de Misión y Visión */
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.mision, .vision {
+    flex-basis: 45%;
+}
+
+.mision img, .vision img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de Información de contacto */
+.informacion-contacto {
+    text-align: left;
+}
+
+.informacion-contacto form {
+    margin-top: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.enviar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.enviar:hover {
+    background-color: #45a049;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acerca-de, .turnos, .imagen-derecha {
+    width: 30%;
+   
+    box-sizing: border-box;
+    padding: 10px; /* Ajusta el espaciado interno */
+}
+
+.turnos {
+    border: 2px solid blue; /* Borde azul */
+    padding: 10px; /* Espaciado interno */
+}
+
+.imagen-derecha img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .menu-superior {
+        padding-top: 100px; /* Reducir el espacio superior */
+    }
+
+    .menu-superior ul {
+        flex-wrap: wrap; /* Envolver los elementos en pantallas pequeñas */
+        justify-content: center; /* Centrar los elementos */
+    }
+
+    .menu-superior ul li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .desplegable {
+        position: static; /* Cambiar posición para que sea estática */
+        margin-top: 10px;
+    }
+
+    .contenido-desplegable {
+        position: static; /* Cambiar posición para que sea estática */
+        display: none; /* Ocultar el menú desplegable */
+        width: 100%; /* Ancho completo */
+        margin-top: 10px;
+        background-color: gray;
+    }
+
+    .desplegable:hover .contenido-desplegable {
+        display: block; /* Mostrar el menú desplegable al hacer hover */
+    }
+
+    .mision-vision {
+        flex-direction: column; /* Apilar elementos en columnas */
+    }
+
+    .mision, .vision {
+        flex-basis: 100%; /* Ancho completo para mision y vision */
+        margin-bottom: 30px; /* Espacio inferior entre mision y vision */
+    }
+
+    .mision img, .vision img {
+        width: 100%; /* Ajustar imagen al ancho del contenedor */
+    }
+
+    .acerca-de, .turnos, .imagen-derecha {
+        width: 100%; /* Ancho completo para secciones en el footer */
+        margin-bottom: 20px; /* Espacio inferior entre secciones */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-superior {
+        padding-top: 80px; /* Reducir el espacio superior */
+    }
+
+    .menu-superior ul li {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    .contenido-desplegable {
+        margin-top: 5px;
+    }
+
+    .mision, .vision {
+        margin-bottom: 20px; /* Espacio inferior entre mision y vision */
+    }
+
+    .acerca-de, .turnos, .imagen-derecha {
+        width: 100%; /* Ancho completo para secciones en el footer */
+        margin-bottom: 10px; /* Espacio inferior entre secciones */
+    }
+}

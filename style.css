@@ -1,0 +1,272 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total de los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente general del sitio */
+}
+
+header {
+    color: #fff; /* Color del texto en el encabezado */
+}
+
+.menu-superior {
+    padding: 80px 30px 40px; /* Espaciado interno del menú superior */
+    background-image: url('Imgin/banner.png'); /* Imagen de fondo del menú */
+    background-size: 100%; /* Ajusta el tamaño de la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding-top: 130px; /* Espaciado superior adicional */
+}
+
+.menu-superior ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    display: flex; /* Usa flexbox para distribuir los elementos de la lista */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas si es necesario */
+    justify-content: space-between; /* Espacio igual entre los elementos */
+    padding: 0 20px; /* Espaciado interno horizontal */
+}
+
+.menu-superior ul li {
+    margin-right: 20px; /* Espaciado a la derecha de cada elemento de la lista */
+}
+
+.menu-superior ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.menu-superior ul li a {
+    color: black; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.menu-superior ul li a:hover {
+    color: #ffd700; /* Color del texto al pasar el cursor */
+}
+
+.desplegable {
+    position: sticky; /* Mantiene la posición del menú desplegable */
+}
+
+.contenido-desplegable {
+    display: none; /* Oculta el contenido desplegable por defecto */
+    position: absolute; /* Posiciona el contenido de manera absoluta */
+    top: 100%; /* Posición superior del contenido */
+    left: -150px; /* Ajusta la posición horizontal */
+    width: 200px; /* Ancho del menú desplegable */
+    z-index: 1; /* Asegura que el menú esté encima de otros elementos */
+    background-color: gray; /* Color de fondo del menú desplegable */
+    padding: 10px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+}
+
+.desplegable:hover .contenido-desplegable {
+    display: inline-block; /* Muestra el contenido desplegable al pasar el cursor */
+}
+
+.contenido-desplegable a {
+    display: block; /* Muestra los enlaces como bloques */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Elimina la subrayado */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+    padding: 5px 0; /* Espaciado interno vertical */
+}
+
+.contenido-desplegable a:hover {
+    color: #ffd700; /* Color del texto al pasar el cursor */
+}
+
+.imagen-debajo-menu {
+    text-align: center; /* Centra la imagen horizontalmente */
+    padding-top: 0px; /* Espaciado superior */
+}
+
+.imagen-debajo-menu img {
+    width: 100%; /* Ancho de la imagen ajustado al contenedor */
+    max-width: 100%; /* Ancho máximo de la imagen */
+}
+
+.texto-debajo-menu {
+    background-color: #FFDB58; /* Color de fondo amarillo mostaza */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 20px 0; /* Espaciado interno vertical */
+}
+
+.contenedor-texto {
+    max-width: 800px; /* Ancho máximo del contenedor de texto */
+    margin: 0 auto; /* Centra el contenedor de texto horizontalmente */
+}
+
+.contenedor-texto h2 {
+    color: #54a206; /* Color del texto verde lima */
+}
+
+.contenedor-texto p {
+    color: #000; /* Color del texto negro */
+    font-size: 16px; /* Tamaño del texto */
+    line-height: 1.5; /* Altura de la línea */
+}
+
+.contenido-adicional {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas si es necesario */
+    justify-content: space-between; /* Espacio igual entre los elementos */
+}
+
+.texto-izquierda, .texto-derecha {
+    width: 48%; /* Ancho aproximado de cada sección */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.texto-derecha {
+    text-align: left; /* Alinea el texto a la izquierda */
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.titulo-seguridad {
+    margin-left: 10px; /* Espacio entre el ícono y el título */
+}
+
+.texto-derecha img {
+    display: block; /* Muestra el icono como bloque */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.icono-seguridad {
+    width: 30px; /* Ancho del ícono */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.SAbajo {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.seccion {
+    clear: both; /* Evita que las secciones se superpongan */
+    margin-top: 20px; /* Espacio entre cada sección */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas si es necesario */
+}
+
+.contenido-izquierda, .contenido-derecha {
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    flex: 1 1 100%; /* Ajusta el tamaño del contenedor al 100% del ancho disponible */
+}
+
+.contenido-izquierda img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+}
+
+.neg {
+    color: black; /* Color del texto negro */
+}
+
+.negt {
+    color: black; /* Color del texto negro */
+    margin-top: 100px; /* Margen superior */
+}
+
+footer {
+    margin-top: 360px; /* Margen superior */
+    background-color: #f2f2f2; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas si es necesario */
+    justify-content: space-between; /* Espacio igual entre los elementos */
+}
+
+.acerca-de, .turnos, .imagen-derecha {
+    width: 30%; /* Ancho aproximado de cada sección */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+}
+
+.turnos {
+    border: 2px solid blue; /* Borde azul */
+    padding: 10px; /* Espaciado interno */
+}
+
+.imagen-derecha img {
+    max-width: 60%; /* Ajusta la imagen al 60% del contenedor */
+    float: right; /* Alinea la imagen a la derecha */
+}
+
+/* Consultas de medios para diseño responsivo */
+@media (max-width: 768px) {
+    .menu-superior ul {
+        flex-direction: column; /* Cambia la dirección del menú a columna */
+        align-items: center; /* Centra los elementos del menú */
+    }
+
+    .menu-superior ul li {
+        margin-bottom: 10px; /* Espaciado inferior de cada elemento */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+
+    .contenido-adicional {
+        flex-direction: column; /* Cambia la dirección del contenido adicional a columna */
+    }
+
+    .texto-izquierda, .texto-derecha {
+        width: 100%; /* Ancho completo de las secciones */
+    }
+
+    .seccion {
+        flex-direction: column; /* Cambia la dirección de las secciones a columna */
+    }
+
+    .contenido-izquierda, .contenido-derecha {
+        width: 100%; /* Ancho completo de los contenedores */
+    }
+
+    .acerca-de, .turnos, .imagen-derecha {
+        width: 100%; /* Ancho completo de las secciones del pie de página */
+        margin-bottom: 20px; /* Espaciado inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-superior {
+        padding: 60px 20px 30px; /* Ajusta el padding del menú superior */
+    }
+
+    .menu-superior ul li a {
+        font-size: 14px; /* Tamaño del texto del menú */
+    }
+
+    .contenedor-texto h2 {
+        font-size: 20px; /* Tamaño del texto del encabezado */
+    }
+
+    .contenedor-texto p {
+        font-size: 14px; /* Tamaño del texto del párrafo */
+    }
+
+    .contenido-adicional {
+        padding: 10px; /* Espaciado interno del contenido adicional */
+    }
+
+    .contenido-izquierda img {
+        max-width: 100%; /* Ancho máximo de la imagen */
+    }
+
+    .negt {
+        margin-top: 50px; /* Margen superior */
+    }
+
+    footer {
+        margin-top: 200px; /* Margen superior */
+        padding: 10px; /* Espaciado interno */
+    }
+}
